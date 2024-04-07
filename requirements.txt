@@ -7,3 +7,4 @@ python-docx
 pillow
 opencv-python
 opencv-python-headless
+matplotlib
