@@ -1,3 +1,4 @@
+opencv-python
 streamlit
 transformers
 torch
@@ -5,6 +6,4 @@ torchvision
 easyocr
 python-docx
 pillow
-opencv-python
-opencv-python-headless
 matplotlib
