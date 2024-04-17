@@ -7,3 +7,4 @@ easyocr
 python-docx
 pillow
 matplotlib
+opencv-python-headless
