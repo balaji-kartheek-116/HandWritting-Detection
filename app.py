@@ -71,7 +71,7 @@ def visualize_text_detection(image, generated_texts, bounding_boxes):
         plt.text(bbox[0][0], bbox[0][1], generated_text, color='r', fontsize=8)
 
     # Display the image with overlaid text
-    st.image(image, caption="Detected Texts", use_column_width=True)
+    st.image(image, caption="Detected Texts", use_container_width=True)
 
 # Streamlit app
 def main():
@@ -83,7 +83,7 @@ def main():
     if uploaded_file is not None:
         # Display the uploaded image
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True)
 
         # Process the uploaded image
         generated_texts, bounding_boxes = process_image(image)
