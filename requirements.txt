@@ -1,6 +1,6 @@
 opencv-python
 streamlit
-transformers
+transformers==4.37.2
 torch
 torchvision
 easyocr
