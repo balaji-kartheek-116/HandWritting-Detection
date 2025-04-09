@@ -15,6 +15,9 @@ model = VisionEncoderDecoderModel.from_pretrained('microsoft/trocr-base-handwrit
 
 # Function to generate text from a given image region
 def generate_text(image_region):
+    # Ensure the image region is in RGB
+    image_region = image_region.convert("RGB")
+
     # Preprocess the image region
     pixel_values = processor(images=image_region, return_tensors="pt").pixel_values
 
@@ -23,6 +26,7 @@ def generate_text(image_region):
     generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
     return generated_text
+
 
 # Function to process image and extract text
 def process_image(image):
